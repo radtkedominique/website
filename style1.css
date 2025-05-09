@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+
+.head header {
+    background: #df0a0a;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.head header img {
+    height: 100%;
+    width: auto;
+}
+
+
+.head nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.head .nav-links {
+    list-style: none;
+    /*gets rid of the list dots*/
+    display: flex;
+    gap: 15px;
+}
+
+.head .nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.landing {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.landing img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.5;
+}
+
+.landing-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+.landing-text button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.landing-text button:hover {
+    background-color: #df0a0a;
+    transform: translateY(-1px);
+}
+
+.landing-text button:active {
+    transform: translateY(0);
+    background-color: #400000;
+}

@@ -1,0 +1,506 @@
+.landing,
+.landing * {
+  box-sizing: border-box;
+}
+.landing {
+  background: #ffffff;
+  height: 6267px;
+  position: relative;
+  overflow: hidden;
+}
+.impressum {
+  background: rgba(242, 242, 242, 0.8);
+  width: 1440px;
+  height: 357px;
+  position: absolute;
+  left: 0px;
+  top: 5893px;
+  overflow: hidden;
+}
+.line-1 {
+  margin-top: -2px;
+  border-style: solid;
+  border-color: rgba(242, 242, 242, 0.8);
+  border-width: 2px 0 0 0;
+  width: 1440px;
+  height: 0px;
+  position: absolute;
+  left: 0px;
+  top: 5793px;
+  transform-origin: 0 0;
+  transform: rotate(-0.08deg) scale(1, 1);
+}
+.categories {
+  width: 1297px;
+  height: 1560px;
+  position: absolute;
+  left: 72px;
+  top: 3441px;
+}
+.rectangle-8 {
+  background: #d9d9d9;
+  width: 619px;
+  height: 682px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.rectangle-9 {
+  background: #d9d9d9;
+  width: 619px;
+  height: 682px;
+  position: absolute;
+  left: 678px;
+  top: 0px;
+}
+.rectangle-10 {
+  background: #d9d9d9;
+  width: 619px;
+  height: 682px;
+  position: absolute;
+  left: 678px;
+  top: 800px;
+}
+.rectangle-11 {
+  background: #d9d9d9;
+  width: 619px;
+  height: 682px;
+  position: absolute;
+  left: 0px;
+  top: 800px;
+}
+.latest-exams {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 2px;
+  top: 703px;
+  width: 617px;
+  height: 57px;
+}
+.tutoring {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 678px;
+  top: 703px;
+  width: 619px;
+  height: 57px;
+}
+.smarties-condoms-co {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 678px;
+  top: 1503px;
+  width: 619px;
+  height: 57px;
+}
+.whatever-else {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 2px;
+  top: 1503px;
+  width: 619px;
+  height: 57px;
+}
+.exams {
+  width: 1440px;
+  height: 417px;
+  position: absolute;
+  left: 0px;
+  top: 2824px;
+}
+.favorites {
+  border-radius: 2px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  gap: 59px;
+  align-items: center;
+  justify-content: center;
+  width: 1440px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 88px;
+  overflow: hidden;
+}
+.rectangle-4 {
+  background: #d9d9d9;
+  flex-shrink: 0;
+  width: 280px;
+  height: 329px;
+  position: relative;
+}
+.rectangle-3 {
+  background: #d9d9d9;
+  flex-shrink: 0;
+  width: 280px;
+  height: 329px;
+  position: relative;
+}
+.rectangle-5 {
+  background: #d9d9d9;
+  flex-shrink: 0;
+  width: 280px;
+  height: 329px;
+  position: relative;
+}
+.rectangle-6 {
+  background: #d9d9d9;
+  flex-shrink: 0;
+  width: 280px;
+  height: 329px;
+  position: relative;
+}
+.button {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 195px;
+  height: 43px;
+  position: absolute;
+  left: 72px;
+  top: 15px;
+}
+.shop-now {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Light", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  position: relative;
+}
+.latest-exams2 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  position: absolute;
+  left: 1126px;
+  top: calc(50% - 193.5px);
+}
+.new {
+  width: 1160px;
+  height: 614px;
+  position: absolute;
+  left: 235px;
+  top: 1928px;
+}
+.newest-collection {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  position: absolute;
+  left: 0px;
+  top: 206px;
+}
+.rectangle-7 {
+  background: #d9d9d9;
+  width: 619px;
+  height: 614px;
+  position: absolute;
+  left: 541px;
+  top: 0px;
+}
+.wdski-24-math-1 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Light", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: underline;
+  position: absolute;
+  left: 88px;
+  top: 263px;
+}
+.favorites2 {
+  width: 1440px;
+  height: 417px;
+  position: absolute;
+  left: 0px;
+  top: 1229px;
+}
+.favorites3 {
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  gap: 59px;
+  align-items: center;
+  justify-content: center;
+  width: 1440px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 88px;
+  overflow: hidden;
+}
+.button2 {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 195px;
+  height: 43px;
+  position: absolute;
+  left: 1174px;
+  top: 3px;
+}
+.student-favorites {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  position: absolute;
+  left: 72px;
+  top: calc(50% - 208.5px);
+}
+.shop {
+  width: 1440px;
+  height: 940px;
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  overflow: hidden;
+}
+.a-collection-of-everything-a-student-could-need-from-exam-results-over-tutoring-to-condoms-shop-our-essentials-now {
+  color: #000000;
+  text-align: center;
+  font-family: "InclusiveSans-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 493px;
+  width: 821px;
+}
+.student-essentials {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  position: absolute;
+  left: 453px;
+  top: 404px;
+}
+.button3 {
+  background: #000000;
+  border-radius: 10px;
+  padding: 17px 25px 17px 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: calc(50% - -116.5px);
+  overflow: hidden;
+}
+.shop2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "InclusiveSans-Regular", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  background: #e10600;
+  width: 1440px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+.navigation {
+  width: 361px;
+  height: 79px;
+  position: absolute;
+  left: 1046px;
+  top: 50%;
+  translate: 0 -50%;
+  overflow: hidden;
+}
+.about-us {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 47.5px);
+  top: 50%;
+  translate: 0 -50%;
+}
+.button4 {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1px;
+  padding: 10px 17px 10px 17px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 260px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.shop3 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faq {
+  width: 1301px;
+  height: 329px;
+  position: absolute;
+  left: 72px;
+  top: 5118px;
+}
+.legal {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.5px;
+  padding: 10px 20px 10px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1297px;
+  height: 97px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.faq-antworten-auf-ihre-fragen {
+  color: #000000;
+  text-align: left;
+  font-family: "InclusiveSans-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.help {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.5px;
+  padding: 10px 20px 10px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1297px;
+  height: 97px;
+  position: absolute;
+  left: 2px;
+  top: 116px;
+}
+.brauchst-du-hilfe-unser-kundenservice-ist-nicht-f-r-dich-da {
+  color: #000000;
+  text-align: left;
+  font-family: "InclusiveSans-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.faq2 {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.5px;
+  padding: 10px 20px 10px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1297px;
+  height: 97px;
+  position: absolute;
+  left: 4px;
+  top: 232px;
+}
+.ist-student-essentials-legal-nope {
+  color: #000000;
+  text-align: left;
+  font-family: "InclusiveSans-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.zahlungsarten {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  left: 72px;
+  top: 5804px;
+}
