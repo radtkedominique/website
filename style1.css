@@ -197,6 +197,11 @@ body {
 **/
 
 .categories {
+
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
     margin-top: 100px;
     margin-bottom: 100px;
 
@@ -219,6 +224,12 @@ body {
     width: 100%;
     height: 100%;
     background-color: #ccc;
+}
+
+.latest-exams{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 
