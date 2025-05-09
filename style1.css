@@ -38,18 +38,22 @@ body {
 
 .landing {
     position: relative;
-    width: 100%;
-    height: 400px;
+    max-height: 900px;
     overflow: hidden;
+    display: flex;
+    align-items: center; /* Vertically centers child elements */
+    justify-content: center; /* Optional: centers horizontally */
 }
 
 .landing img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     object-fit: cover;
     display: block;
     opacity: 0.5;
 }
+
 
 .landing-text {
     position: absolute;
