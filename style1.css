@@ -104,28 +104,57 @@ body {
     color: #333;
   }
   
+
   
-  .cards {
+  .cards-header {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+    align-items: center;
   }
-  
+
+  .shop-now {
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;  /* Rounded corners */
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px; /* Space between the header and the button */
+  }
+
   .card {
+    position: relative;
     flex: 1 1 calc(25% - 20px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
   }
+
   
+  /**
   .card img {
     width: 100%;
     height: auto;
     display: block;
   }
+**/
+.card h3 {
+    position: absolute;
+    top: 60%;
+    left: 10px;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
 
   .image-placeholder {
     width: 100%;
@@ -133,12 +162,35 @@ body {
     background-color: #ccc;
   }
   
-  .card p {
-    margin: 10px;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: left;
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: stretch;
   }
+  
+
+/* Card hover effect */
+.card:hover {
+    transform: scale(1.03);
+    z-index: 1; /* Bring hovered card to front */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+  
+  /* Dim and blur non-hovered cards */
+  .card-grid:hover .card:not(:hover) {
+    transform: scale(0.95);
+    filter: brightness(0.6) saturate(0.5) blur(2px);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  /* Also dim and blur text if needed */
+  .card-grid:hover .card:not(:hover) p {
+    filter: brightness(0.7) blur(2px);
+  }
+  
+
 
   @media (max-width: 768px) {
     .card {
