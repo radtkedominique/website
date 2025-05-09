@@ -116,12 +116,19 @@ body {
     background-color: transparent;
     border: 2px solid black;
     border-radius: 5px;  /* Rounded corners */
-    padding: 8px 16px;
+    padding: 8px 30px;
     cursor: pointer;
     font-size: 16px;
-    margin-left: 20px; /* Space between the header and the button */
-  }
 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.shop-now:hover {
+    background-color: #c20505;
+    border: 2px solid #c20505;
+    color: white;
+    transform: translateY(-1px);
+}
   .card {
     position: relative;
     flex: 1 1 calc(25% - 20px);
@@ -188,6 +195,10 @@ body {
   /* Also dim and blur text if needed */
   .card-grid:hover .card:not(:hover) p {
     filter: brightness(0.7) blur(2px);
+  }
+
+  .latest-exams.cards-header {
+
   }
   
 
