@@ -184,21 +184,22 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+/**
 .card-grid:hover .card:not(:hover) {
     transform: scale(0.95);
     filter: brightness(0.6) saturate(0.5) blur(2px);
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-
 .card-grid:hover .card:not(:hover) p {
     filter: brightness(0.7) blur(2px);
 }
-
+**/
 
 .categories {
     margin-top: 100px;
     margin-bottom: 100px;
+
 }
 
 .categories .card {
@@ -211,7 +212,7 @@ body {
     transition: transform 0.3s ease;
     transform-style: preserve-3d;
     will-change: transform;
-    aspect-ratio: 1;
+    aspect-ratio: 1.25;
 }
 
 .categories .image-placeholder {
