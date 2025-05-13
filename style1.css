@@ -54,22 +54,22 @@ body {
     opacity: 0.5;
 }
 
-
-.landing-text {
+.landing-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+
     text-align: center;
+    color: white;
     font-size: 0.8rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-}
+  }
 
 
-.landing-btn .shop-now {
+.landing .landing-content .landing-text .shop-now {
     display: inline-block;
-    margin-top: 20px;
+    
     padding: 12px 20px;
     font-size: 1rem;
     font-weight: bold;
@@ -81,13 +81,12 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.landing-btn .shop-now:hover {
+.landing .landing-content .landing-text .shop-now:hover {
     background-color: #c20505;
-    transform: translateY(-1px);
+
 }
 
-.landing-btn .shop-now:active {
-    transform: translateY(0);
+.landing .landing-content .landing-text .shop-now:active {
     background-color: #400000;
 }
 
@@ -121,7 +120,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     color: black; /* Add this */
-    text-decoration: none; /* Add this */
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
