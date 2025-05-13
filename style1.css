@@ -95,6 +95,7 @@ body {
 
 
 .student-favorites {
+    margin-top: 50px;
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -263,8 +264,8 @@ body {
     padding: 20px;
     box-sizing: border-box;
 
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
 }
 
