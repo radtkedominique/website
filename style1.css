@@ -41,8 +41,9 @@ body {
     max-height: 900px;
     overflow: hidden;
     display: flex;
-    align-items: center; /* Vertically centers child elements */
-    justify-content: center; /* Optional: centers horizontally */
+    align-items: center;
+    justify-content: center;
+
 }
 
 .landing img {
@@ -51,7 +52,8 @@ body {
     min-height: 100%;
     object-fit: cover;
     display: block;
-    opacity: 0.5;
+    opacity: 0.80;
+    filter: brightness(70%)
 }
 
 .landing-content {
@@ -64,12 +66,12 @@ body {
     color: white;
     font-size: 0.8rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  }
+}
 
 
 .landing .landing-content .landing-text .shop-now {
     display: inline-block;
-    
+
     padding: 12px 20px;
     font-size: 1rem;
     font-weight: bold;
@@ -98,6 +100,12 @@ body {
     box-sizing: border-box;
 }
 
+.latest-exams {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 
 .cards-header {
     display: flex;
@@ -119,7 +127,8 @@ body {
     padding: 8px 25px;
     cursor: pointer;
     font-size: 16px;
-    color: black; /* Add this */
+    color: black;
+    /* Add this */
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -134,26 +143,30 @@ body {
 .card {
     position: relative;
     flex: 1 1 calc(25% - 20px);
+    aspect-ratio: 4 / 3; 
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     transform-style: preserve-3d;
-    will-change: transform;
 }
 
 
-/**
-  .card img {
+ .card img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
-  }
-**/
+    opacity: 0.80;
+    filter: brightness(70%)
+}
+
+
 .card h3 {
     position: absolute;
-    top: 60%;
+    top: 50%; /* Adjust as needed */
     left: 10px;
     transform: translateY(-50%);
     margin: 0;
@@ -162,12 +175,28 @@ body {
     color: white;
     font-size: 18px;
     font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+
+}
+
+.card p {
+    position: absolute;
+    top: calc(50% + 15px); /* Place below h3 (adjust 24px as needed) */
+    left: 10px;
+    margin: 0;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 
 .image-placeholder {
     width: 100%;
-    height: 200px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
     background-color: #ccc;
 }
 
@@ -183,9 +212,34 @@ body {
 .card:hover {
     transform: scale(1.03);
     z-index: 1;
-    /* Bring hovered card to front */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
+
+.card:hover h3::after,
+.card h3::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  background:#c20505;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.card:hover h3::before {
+    top: -5px;
+    transform-origin: left;
+  }
+  
+  .card:hover h3::after,
+  .card:hover h3::before {
+    transform: scaleX(1);
+  }
+
+
 
 /**
 .card-grid:hover .card:not(:hover) {
@@ -198,6 +252,7 @@ body {
     filter: brightness(0.7) blur(2px);
 }
 **/
+
 
 .categories {
 
@@ -221,6 +276,7 @@ body {
     transform-style: preserve-3d;
     will-change: transform;
     aspect-ratio: 1.25;
+    
 }
 
 .categories .image-placeholder {
@@ -229,11 +285,6 @@ body {
     background-color: #ccc;
 }
 
-.latest-exams{
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-}
 
 
 
