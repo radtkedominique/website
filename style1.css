@@ -1,7 +1,29 @@
-body {
-    font-family: 'Arial', sans-serif;
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff2') format('woff2');
+    font-weight: 400;
+    /* Regular */
+    font-style: normal;
 }
 
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.woff2') format('woff2');
+    font-weight: 500;
+    /* Medium */
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Satoshi', Helvetica, sans-serif;
+}
 
 .head header {
     background: white;
@@ -36,9 +58,14 @@ body {
     text-decoration: none;
 }
 
+.search input {
+    border-radius: 8px;
+    padding-inline: 5px;
+}
+
 .landing {
     position: relative;
-    max-height: 900px;
+    max-height: 400px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -52,33 +79,49 @@ body {
     min-height: 100%;
     object-fit: cover;
     display: block;
-    opacity: 0.60;
-    filter: brightness(90%)
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0, 1) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 1) 100%);
+
 }
 
 .landing-content {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    text-align: center;
-    color: white;
+    left: 60px;
+    /* Add padding on the left */
+    transform: translateY(-50%);
+    /* Only vertical centering */
+    text-align: left;
+    color: rgb(0, 0, 0);
     font-size: 0.8rem;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+
+}
+
+.landing-text {
+    max-width: 400px;
+}
+
+.landing-text h1 {
+    font-size: 40px;
+}
+
+.landing-text p {
+    margin-top: 15px;
+    font-size: 15px;
+    color: rgb(117, 115, 115);
 }
 
 
 .landing .landing-content .landing-text .shop-now {
     display: inline-block;
-
+    margin-top: 15px;
     padding: 12px 20px;
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    background-color: #df0a0a;
+    background-color: #000000;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -93,17 +136,42 @@ body {
 }
 
 
+.click-categories ul {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.click-categories ul li {
+    margin: 20px 20px;
+    color: #fff;
+}
+
+.categorie-item:hover {
+    transition: all 0.3s ease;
+    font-size: 17px;
+}
+
 
 .student-favorites {
     margin-top: 50px;
     width: 100%;
-    padding: 20px;
+    padding: 60px;
     box-sizing: border-box;
+
 }
+
 
 .latest-exams {
     width: 100%;
-    padding: 20px;
+    padding: 60px;
     box-sizing: border-box;
 }
 
@@ -119,12 +187,13 @@ body {
     font-weight: normal;
     margin-bottom: 20px;
     color: #333;
+    
 }
 
 .shop-now {
     background-color: transparent;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 8px 25px;
     cursor: pointer;
     font-size: 16px;
@@ -144,7 +213,7 @@ body {
 .card {
     position: relative;
     flex: 1 1 calc(25% - 20px);
-    aspect-ratio: 4 / 3; 
+    aspect-ratio: 4 / 3;
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
@@ -154,7 +223,7 @@ body {
 }
 
 
- .card img {
+.card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -166,8 +235,12 @@ body {
 
 
 .card h3 {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+
     position: absolute;
-    top: 50%; /* Adjust as needed */
+    top: 50%;
+    /* Adjust as needed */
     left: 10px;
     transform: translateY(-50%);
     margin: 0;
@@ -182,7 +255,8 @@ body {
 
 .card p {
     position: absolute;
-    top: calc(50% + 15px); /* Place below h3 (adjust 24px as needed) */
+    top: calc(50% + 15px);
+    /* Place below h3 (adjust 24px as needed) */
     left: 10px;
     margin: 0;
     color: white;
@@ -216,32 +290,33 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.card:hover img{
+.card:hover img {
     filter: brightness(80%)
 }
+
 .card:hover h3::after,
 .card h3::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2.5px;
-  background:#c20505;
-  bottom: -5px;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s ease-out;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2.5px;
+    background: #c20505;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
 }
 
 .card:hover h3::before {
     top: -5px;
     transform-origin: left;
-  }
-  
-  .card:hover h3::after,
-  .card:hover h3::before {
+}
+
+.card:hover h3::after,
+.card:hover h3::before {
     transform: scaleX(1);
-  }
+}
 
 
 
@@ -259,14 +334,17 @@ body {
 
 
 .categories {
-
-    width: 100%;
-    padding: 20px;
+    width: 80%; /* Set a width less than 100% */
+    padding: 60px;
+    margin: 60px auto;  /* Horizontally center with auto, top and bottom margin of 60px */
     box-sizing: border-box;
-
-    margin-top: 50px;
-    margin-bottom: 50px;
-
+    background-color: #4444;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;   /* Allow items to wrap on smaller screens */
+    gap: 30px;         /* Adds spacing between cards */
+    justify-content: center; /* Center cards horizontally */
+    align-items: center; /* Center cards vertically */
 }
 
 .categories .card {
@@ -280,7 +358,7 @@ body {
     transform-style: preserve-3d;
     will-change: transform;
     aspect-ratio: 1.25;
-    
+
 }
 
 .categories .image-placeholder {
@@ -297,3 +375,4 @@ body {
         flex: 1 1 calc(50% - 20px);
     }
 }
+
