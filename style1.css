@@ -52,8 +52,8 @@ body {
     min-height: 100%;
     object-fit: cover;
     display: block;
-    opacity: 0.80;
-    filter: brightness(70%)
+    opacity: 0.60;
+    filter: brightness(90%)
 }
 
 .landing-content {
@@ -160,7 +160,7 @@ body {
     object-position: center;
     display: block;
     opacity: 0.80;
-    filter: brightness(70%)
+    filter: brightness(60%)
 }
 
 
@@ -215,6 +215,9 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.card:hover img{
+    filter: brightness(80%)
+}
 .card:hover h3::after,
 .card h3::before {
   content: '';
