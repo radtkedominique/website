@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student-essentials</title>
+  <link rel="stylesheet" href="./shop.css">
+</head>
+
+
+<body>
+
+    <div class="head">
+        <header>
+          <img src="dhbw_logo.png" alt="dhbw-logo">
+          <nav>
+            <ul class="nav-links">
+              <li><a href="#about us">about us</a></li>
+              <li><a href="#categories">categories</a></li>
+              <li><a href="#shop">shop</a></li>
+              <li>
+                <div class="search">
+                  <input type="text" class="searchTerm" placeholder="Search...">
+               </div>
+              </li>
+    
+            </ul>
+          </nav>
+        </header>
+      </div>
+    
+      <div class="filters">
+        <button data-filter="all" class="filter-btn active">All</button>
+        <button data-filter="Dokumente" class="filter-btn">Dokumente</button>
+        <button data-filter="Prüfungslösung" class="filter-btn">Prüfungslösung</button>
+        <button data-filter="After School Essentials" class="filter-btn">After School Essentials</button>
+        <button data-filter="Tutoring" class="filter-btn">Tutoring</button>
+      </div>
+      
+      
+      <div class="card-grid">
+
+        <div class="card" data-category="Dokumente">
+          <img src="1140-joyfulwomandancing.jpg" alt="">
+          <h3>Exmatrikulation</h3>
+          <h3 class="price">2.99 EUR</h3>
+          <p>Antrag</p>
+        </div>
+      
+        <div class="card" data-category="Prüfungslösungen">
+          <img src="64_GS_-_Event-Teaser_-_1200_x_900_px_-_240711.jpg" alt="">
+          <h3>Mathe1</h3>
+          <h3 class="price">29.99 EUR</h3>
+          <p>Prüfungslösung</p>
+        </div>
+      
+        <div class="card" data-category="Prüfungslösungen">
+          <img src="hieroglyphics-429863-960-720-hieroglyphen-b.jpeg" alt="">
+          <h3>Mathe2</h3>
+          <h3 class="price">29.99 EUR</h3>
+          <p>Prüfungslösung</p>
+        </div>
+      
+        <div class="card" data-category="After School Essentials">
+          <div class="image-placeholder"></div>
+          <h3>Meenes Tochter</h3>
+          <h3 class="price">30.99 EUR</h3>
+          <p>Handynummer</p>
+        </div>
+      
+        <div class="card" data-category="After School Essentials">
+            <div class="image-placeholder"></div>
+            <h3>Meenes Tochter</h3>
+            <h3 class="price">30.99 EUR</h3>
+            <p>Handynummer</p>
+          </div>
+        
+          <div class="card" data-category="After School Essentials">
+            <div class="image-placeholder"></div>
+            <h3>Meenes Tochter</h3>
+            <h3 class="price">30.99 EUR</h3>
+            <p>Handynummer</p>
+          </div>
+        
+          <div class="card" data-category="After School Essentials">
+            <div class="image-placeholder"></div>
+            <h3>Meenes Tochter</h3>
+            <h3 class="price">30.99 EUR</h3>
+            <p>Handynummer</p>
+          </div>
+        
+          <div class="card" data-category="After School Essentials">
+            <div class="image-placeholder"></div>
+            <h3>Meenes Tochter</h3>
+            <h3 class="price">30.99 EUR</h3>
+            <p>Handynummer</p>
+          </div>
+        
+          <div class="card" data-category="After School Essentials">
+            <div class="image-placeholder"></div>
+            <h3>Meenes Tochter</h3>
+            <h3 class="price">30.99 EUR</h3>
+            <p>Handynummer</p>
+          </div>
+
+          <div class="card" data-category="After School Essentials">
+            <div class="image-placeholder"></div>
+            <h3>Meenes Tochter</h3>
+            <h3 class="price">30.99 EUR</h3>
+            <p>Handynummer</p>
+          </div>
+        
+          <div class="card" data-category="After School Essentials">
+            <div class="image-placeholder"></div>
+            <h3>Meenes Tochter</h3>
+            <h3 class="price">30.99 EUR</h3>
+            <p>Handynummer</p>
+          </div>
+        
+          <div class="card" data-category="After School Essentials">
+            <div class="image-placeholder"></div>
+            <h3>Meenes Tochter</h3>
+            <h3 class="price">30.99 EUR</h3>
+            <p>Handynummer</p>
+          </div>
+      
+      </div>
+     
+      <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.card');
+    
+        filterButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            // Remove 'active' class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');  // Add active class to the clicked button
+    
+            const filter = button.dataset.filter;
+    
+            cards.forEach(card => {
+              const category = card.dataset.category;
+    
+              // Show the card if category matches or if the filter is "all"
+              if (filter === 'all' || category === filter) {
+                card.style.display = 'flex';  // Show card
+              } else {
+                card.style.display = 'none';  // Hide card
+              }
+            });
+          });
+        });
+      </script>
+    
+</body>
+</html>

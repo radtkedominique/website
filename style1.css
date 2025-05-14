@@ -42,12 +42,12 @@ body {
 .head nav {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
 }
 
 
 .head .nav-links {
     list-style: none;
+    align-items: center;
     /*gets rid of the list dots*/
     display: flex;
     gap: 15px;
@@ -59,9 +59,23 @@ body {
 }
 
 .search input {
-    border-radius: 8px;
-    padding-inline: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 400px;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
+
+.search input:focus {
+  outline: none;
+  border-color: #4f46e5; /* indigo-600 */
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
 
 .landing {
     position: relative;
@@ -154,11 +168,36 @@ body {
     color: #fff;
 }
 
-.categorie-item:hover {
-    transition: all 0.3s ease;
-    font-size: 17px;
+.category-item {
+  color: white;
+  cursor: pointer;
+  position: relative;
+  padding: 8px 4px;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
+.category-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.category-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.category-item:hover {
+  color: #e0e0e0;
+}
 
 .student-favorites {
     margin-top: 30px;
