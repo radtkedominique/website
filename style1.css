@@ -65,7 +65,7 @@ body {
 
 .landing {
     position: relative;
-    max-height: 400px;
+    max-height: 700px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -414,17 +414,18 @@ body {
 
 
 .footer-5-column {
+  border-top: 1px solid rgb(219, 215, 215);
     padding-top: 3rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    width: 100%;
   }
   .footer-5-column p {
     color: #777777;
   }
   .footer-5-column .footer-container {
-    max-width: 1320px;
     width: 100%;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 30px;
     padding-left: 12px;
     padding-right: 12px;
     box-sizing: border-box;
