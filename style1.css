@@ -161,7 +161,7 @@ body {
 
 
 .student-favorites {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
     padding: 60px;
     box-sizing: border-box;
@@ -171,7 +171,7 @@ body {
 
 .latest-exams {
     width: 100%;
-    padding: 60px;
+    padding: 30px;
     box-sizing: border-box;
 }
 
@@ -210,70 +210,63 @@ body {
     transform: translateY(-1px);
 }
 
+
 .card {
-    position: relative;
     flex: 1 1 calc(25% - 20px);
-    aspect-ratio: 4 / 3;
-    background: #fff;
+    background: none;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    transform-style: preserve-3d;
-}
-
-
-.card img {
+    text-align: left;
+    font-family: 'Satoshi', sans-serif;
+  }
+  
+  /* Image container */
+  .card img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 3 / 4;
     object-fit: cover;
     object-position: center;
     display: block;
-    opacity: 0.80;
-    filter: brightness(60%)
-}
-
-
-.card h3 {
-    font-family: 'Satoshi', sans-serif;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    opacity: 0.9;
+    filter: brightness(60%);
+  }
+  
+  .card h3 {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 12px 0 4px;
+    color: #111;
+  }
+  
+  /* Target the second h3 (price) */
+  .card h3.price {
+    float: right;
     font-weight: 500;
-
-    position: absolute;
-    top: 50%;
-    /* Adjust as needed */
-    left: 10px;
-    transform: translateY(-50%);
+    font-size: 0.95rem;
+    color: #2b2b2b;
+  }
+  
+  .card p {
     margin: 0;
-    padding: 0;
-    background: none;
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-
-}
-
-.card p {
-    position: absolute;
-    top: calc(50% + 15px);
-    /* Place below h3 (adjust 24px as needed) */
-    left: 10px;
-    margin: 0;
-    color: white;
-    font-size: 13px;
-    font-weight: 600;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-}
-
-
-.image-placeholder {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #555;
+  }
+  
+  .image-placeholder {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 3 / 4; /* Match your image aspect ratio */
     object-fit: cover;
     object-position: center;
     display: block;
     background-color: #ccc;
+    border-radius: 8px;
 }
+
 
 .card-grid {
     display: flex;
@@ -284,41 +277,12 @@ body {
 }
 
 
-.card:hover {
+.card:hover img{
     transform: scale(1.03);
     z-index: 1;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card:hover img {
     filter: brightness(80%)
 }
-
-.card:hover h3::after,
-.card h3::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2.5px;
-    background: #c20505;
-    bottom: -5px;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.4s ease-out;
-}
-
-.card:hover h3::before {
-    top: -5px;
-    transform-origin: left;
-}
-
-.card:hover h3::after,
-.card:hover h3::before {
-    transform: scaleX(1);
-}
-
-
 
 /**
 .card-grid:hover .card:not(:hover) {
@@ -332,41 +296,100 @@ body {
 }
 **/
 
-
 .categories {
-    width: 80%; /* Set a width less than 100% */
-    padding: 60px;
-    margin: 60px auto;  /* Horizontally center with auto, top and bottom margin of 60px */
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px;
     box-sizing: border-box;
-    background-color: #4444;
+    background-color: #f4f4f4;
     border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;   /* Allow items to wrap on smaller screens */
-    gap: 30px;         /* Adds spacing between cards */
-    justify-content: center; /* Center cards horizontally */
-    align-items: center; /* Center cards vertically */
-}
-
-.categories .card {
+    text-align: center;
+  }
+  
+  .categories h1 {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #111;
+  }
+  
+  /* Grid Layout */
+  .categories .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Card Container */
+  .categories .card {
     position: relative;
-    flex: 1 1 calc(50% - 20px);
-    background: #fff;
-    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
     transition: transform 0.3s ease;
-    transform-style: preserve-3d;
-    will-change: transform;
-    aspect-ratio: 1.25;
-
-}
-
-.categories .image-placeholder {
+    cursor: pointer;
+  }
+  
+  
+  /* Image */
+  .categories .card img {
     width: 100%;
-    height: 100%;
-    background-color: #ccc;
-}
-
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    filter: brightness(65%);
+    transition: filter 0.3s ease;
+  }
+  
+  
+  /* Overlay title on image */
+  .categories .card h3 {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Satoshi', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+  
+  /* Description below image */
+  .categories .card p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #333;
+    text-align: left;
+    padding: 0 5px;
+    font-family: 'Satoshi', sans-serif;
+  }
+  
+  .categories .card:hover h3::after,
+  .categories .card h3::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2.5px;
+      background: #c20505;
+      bottom: -5px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease-out;
+  }
+  
+  .categories .card:hover h3::before {
+      top: -5px;
+      transform-origin: left;
+  }
+  
+  .categories .card:hover h3::after,
+  .categories .card:hover h3::before {
+      transform: scaleX(1);
+  }
 
 
 
